@@ -1,0 +1,23 @@
+body {
+margin: 20px;
+font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;}
+h1 {font-size: 2em;}
+h3 {font-size: 1.4em;margin: 0 0 10px 0;}
+small {font-size: 0.4em; color: #808080;}
+i {font-size: 0.9em;}
+h1 small small {font-size: 1em;}
+.track {padding: 10px; background: #00bc03; margin: 10px;}
+.track.history {background: #e1dbdb;}
+img {float: left;margin-right: 10px;}
+p {font-size: 0.8em;display: block;}
+p.album {font-size: 0.7em;font-style: italic;}
+p small {font-size: 0.8em;}
+#ajaxload {
+height:32px;
+width: 32px;
+display: none;
+float: left;
+display: inline-block;
+}
+a {font-size: 0.8em;text-decoration: none;color:#00BC03;}
+a:hover {text-decoration: underline;}

@@ -1,0 +1,41 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="assets/css/annonces.css" />
+</head>
+<body>
+
+<div class="page-header">
+ <h1><span data-bind="text: username">Page Title</span>
+ <small>Showing
+ <small data-bind="text: tracks().length "></small>
+ out of <small data-bind="text: totalTracks"></small>
+ tracks.</small></h1>
+ <div><em>Your username goes in here: </em>
+ <input id="username" type="text" data-bind="value: username" />
+ <a href="javascript:false;" data-bind="click: reloadUser">Click me</a></div>
+</div>
+
+<div data-bind="template: { name : 'trackTemplate', foreach: tracks }"></div>
+<script type="text/x-jquery-tmpl" id="trackTemplate">
+ <div class="track clearfix {{if date}} ${'history'} {{/if}}">
+      <h3>${name}</h3>
+        <a href="${url}"><img src="${image[0]['#text']}" height="34" width="34" /></a>
+            <p>
+              ${artist["#text"]}
+           </p>
+            <p class="album">
+            ${album["#text"]}
+                </p>
+                    <p><small>Played: 
+                {{if date}} ${date["#text"]} 
+                {{else}} ${"Now playing"} 
+                {{/if}}</small></p>
+            </div>
+</script>
+    
+</body>
+<script type="text/javascript" src="assets/js/jquery.min.js"></script>
+<script type="text/javascript" src="assets/js/jquery.tmpl.min.js"></script>
+<script type="text/javascript" src="assets/js/knockout-2.1.0.js"></script>
+<script type="text/javascript" src="assets/js/annonces.js"></script>
+</html>
